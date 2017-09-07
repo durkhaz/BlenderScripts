@@ -18,7 +18,16 @@ for track in tracks:
         
         # Select action and export
         bpy.context.active_object.animation_data.action = track.strips[0].action
-        bpy.ops.export_scene.fbx(filepath=str(path + "animations/" + "Anim_" + track.strips[0].action.name + '.fbx'), use_selection = True, object_types={'ARMATURE'}, bake_anim = True, bake_anim_use_nla_strips=True, bake_anim_use_all_actions=False , add_leaf_bones=False, bake_anim_use_all_bones=True, use_armature_deform_only = True)
+        bpy.ops.export_scene.fbx (
+            filepath = str(path + "animations/" + "Anim_" + track.strips[0].action.name + '.fbx'), 
+            use_selection = True, 
+            object_types={'ARMATURE'}, 
+            bake_anim = True, 
+            bake_anim_use_nla_strips = True, 
+            bake_anim_use_all_actions = False, 
+            add_leaf_bones = False, 
+            bake_anim_use_all_bones = True, 
+            use_armature_deform_only = True)
         
         # Restore all mute flags
         it = 0
