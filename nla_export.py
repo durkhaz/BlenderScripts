@@ -10,7 +10,7 @@ for track in tracks:
 
 # for each track that isn't muted, we select the linked action and export as fbx
 for track in tracks:
-    if track.mute ?? False:
+    if track.mute == False:
         # Mute all tracks that aren't the current one
         for temptrack in tracks:
             if temptrack != track:
