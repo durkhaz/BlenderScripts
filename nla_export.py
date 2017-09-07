@@ -21,7 +21,7 @@ for track in tracks:
         bpy.ops.export_scene.fbx (
             filepath = str(path + "animations/" + "Anim_" + track.strips[0].action.name + '.fbx'), 
             use_selection = True, 
-            object_types={'ARMATURE'}, 
+            object_types = {'ARMATURE'}, 
             bake_anim = True, 
             bake_anim_use_nla_strips = True, 
             bake_anim_use_all_actions = False, 
