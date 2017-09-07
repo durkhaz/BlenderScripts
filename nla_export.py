@@ -32,7 +32,7 @@ for track in tracks:
         # Restore all mute flags
         it = 0
         for temptrack in tracks:
-            temptrack.mute = trackmutes[fuck]
+            temptrack.mute = trackmutes[it]
             it += 1
             
 # Not sure if this is necessary, but let's clear it anyway            
