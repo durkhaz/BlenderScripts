@@ -32,7 +32,8 @@ class SkelMeshExport(bpy.types.Operator):
             print ("Mesh: " + name_mesh + " Armature: " + name_armature)
 
             if (len(name_mesh) > 0) & (len(name_armature) > 0): 
-                os.makedirs(path + name_armature)
+                if not os.path.exists(path + name_armature):
+                    os.makedirs(path + name_armature)
                 bpy.ops.export_scene.fbx (
                     filepath = str(path + name_armature + '//' + name_mesh + '.fbx'), 
                     use_selection = True, 
